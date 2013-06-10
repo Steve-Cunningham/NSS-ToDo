@@ -1,8 +1,13 @@
+
 <h1>All Tasks</h1>
 <ul>
     <% @tasks.each do |task| %>
-        <li><%= task.task %></li>
+        <li><%= task.task_name %> <%= link_to 'Exterminate', task, :method => :destroy %></li>
     <% end %>
+
+
 </ul>
 
 <%= link_to "New Task", new_task_path %>
+
+<%= link_to "New List", new_list_path %>

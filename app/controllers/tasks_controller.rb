@@ -14,4 +14,10 @@ class TasksController < ApplicationController
       redirect_to :root
     end
 
+    def destroy(task)
+      task.destroy
+      flash[:notice] = "Your task has been exterminated"
+      redirect_to :root
+    end
+
 end
